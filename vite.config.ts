@@ -59,8 +59,10 @@ function copyWasmPlugin(): Plugin {
   };
 }
 
+import tailwindcss from '@tailwindcss/vite';
+
 export default defineConfig({
-  plugins: [react(), copyWasmPlugin()],
+  plugins: [react(), tailwindcss(), copyWasmPlugin()],
   server: {
     headers: {
       // Cross-Origin Isolation — required for SharedArrayBuffer / multi-threaded WASM.
